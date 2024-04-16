@@ -1,0 +1,33 @@
+{
+    "name": "carifer/lbpm",
+    "version":"1.0.0",
+    "description": "Laravel business process management",
+    "type": "library",
+    "require": {
+        "spatie/laravel-permission": "^6.4"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Carifer\\Lbpm\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sankaran.Mohankumar",
+            "email": "sankaran.mohankumar@carifer.com"
+        }
+    ],
+    "extra":{
+        "laravel":{
+            "providers":[
+                "Carifer\\Lbpm\\WorkflowServiceProvider"
+            ],
+            "migrations":[
+                "database/migrations"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
