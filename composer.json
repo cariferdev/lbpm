@@ -1,5 +1,5 @@
 {
-    "name": "carifer/lbpm",
+    "name": "cariferdev/lbpm",
     "version":"1.0.0",
     "description": "Laravel business process management",
     "type": "library",
@@ -14,8 +14,8 @@
     },
     "authors": [
         {
-            "name": "Sankaran.Mohankumar",
-            "email": "sankaran.mohankumar@carifer.com"
+            "name": "carifer",
+            "email": "dev@carifer.com"
         }
     ],
     "extra":{
