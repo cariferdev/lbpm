@@ -27,7 +27,7 @@ class WorkflowServiceProvider extends ServiceProvider
         //routes
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
 
-        $this->registerControllers();
+        // $this->registerControllers();
     }
 
     public function register()

@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Lbpm;
 
+use App\Http\Controllers\Controller;
 use App\Models\Service;
 use App\Models\Workflow;
 use App\Models\WorkflowStep;
@@ -19,7 +20,7 @@ class WorkflowController extends Controller
     public function index()
     {
         $workflow = Workflow::get();
-        return view('roles-permissions.workflow.index', compact('workflow'));
+        return view('workflow.workflow.index', compact('workflow'));
     }
 
     public function create()
@@ -28,7 +29,7 @@ class WorkflowController extends Controller
         $workflowSteps = WorkflowStep::get();
         $roles         = Role::get();
         $services      = Service::get();
-        return view('roles-permissions.workflow.create', compact('workflowSteps', 'roles', 'services', 'workflow'));
+        return view('workflow.workflow.create', compact('workflowSteps', 'roles', 'services', 'workflow'));
     }
 
     public function store(Request $request)
@@ -84,7 +85,7 @@ class WorkflowController extends Controller
     public function edit($id)
     {
         $workflow = Workflow::find($id);
-        return view('roles-permissions.workflow.edit', compact('workflow'));
+        return view('workflow.workflow.edit', compact('workflow'));
     }
 
     public function update(Request $request, $id)

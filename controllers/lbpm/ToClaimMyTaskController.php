@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Lbpm;
 
+use App\Http\Controllers\Controller;
 use App\Models\Transaction;
 use App\Models\Workflow;
 use App\Models\WorkflowLog;
@@ -19,7 +20,7 @@ class ToClaimMyTaskController extends Controller
     public function claim_task()
     {
         $workflowLog = WorkflowLog::get();
-        return view('roles-permissions.toclaim-mytask.index',compact('workflowLog'));
+        return view('workflow.toclaim-mytask.index',compact('workflowLog'));
     }
 
     public function claim($id)

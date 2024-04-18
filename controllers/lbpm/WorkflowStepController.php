@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Lbpm;
 
+use App\Http\Controllers\Controller;
 use App\Models\WorkflowStep;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
@@ -16,13 +17,13 @@ class WorkflowStepController extends Controller
     public function index()
     {
         $workflowSteps = WorkflowStep::get();
-        return view('roles-permissions.workflowSteps.index', compact('workflowSteps'));
+        return view('workflow.workflowSteps.index', compact('workflowSteps'));
     }
 
     public function create()
     {
         $roles         = Role::get();
-        return view('roles-permissions.workflowSteps.create', compact('roles'));
+        return view('workflow.workflowSteps.create', compact('roles'));
     }
 
     public function store(Request $request)
@@ -48,7 +49,7 @@ class WorkflowStepController extends Controller
     {
         $workflowSteps = WorkflowStep::find($id);
         $roles         = Role::get();
-        return view('roles-permissions.workflowSteps.edit', compact('workflowSteps', 'roles'));
+        return view('workflow.workflowSteps.edit', compact('workflowSteps', 'roles'));
     }
 
     public function update(Request $request, $id)

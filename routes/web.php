@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Lbpm;
 
 use Illuminate\Support\Facades\Route;
 

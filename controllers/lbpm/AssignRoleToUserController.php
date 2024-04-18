@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Lbpm;
 
+use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
@@ -18,14 +19,14 @@ class AssignRoleToUserController extends Controller
         // $users = User::with('roles')->get();
         //$roles = Role::with('Permissions')->get();
         $users = User::get();
-        return view('roles-permissions.assignRolesToUsers.index',compact('users'));
+        return view('workflow.assignRolesToUsers.index',compact('users'));
     }
 
     public function create()
     {
         $users = User::get();
         $roles = Role::get();
-        return view('roles-permissions.assignRolesToUsers.create',compact('users','roles'));
+        return view('workflow.assignRolesToUsers.create',compact('users','roles'));
     }
 
     public function store(Request $request)
@@ -42,7 +43,7 @@ class AssignRoleToUserController extends Controller
         $selectedUser = User::find($id);
         $users = User::get();
         $roles = Role::get();
-        return view('roles-permissions.assignRolesToUsers.edit',compact('selectedUser','users','roles'));
+        return view('workflow.assignRolesToUsers.edit',compact('selectedUser','users','roles'));
     }
 
     public function update(Request $request, $id)

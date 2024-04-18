@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Lbpm;
 
+use App\Http\Controllers\Controller;
 use App\Models\Service;
 use App\Models\Workflow;
 use Illuminate\Http\Request;
@@ -17,7 +18,7 @@ class ServiceController extends Controller
     public function index()
     {
         $services = Service::get();
-        return view('roles-permissions.services.index', compact('services'));
+        return view('workflow.services.index', compact('services'));
     }
 
     public function show($id)
@@ -26,12 +27,12 @@ class ServiceController extends Controller
         $workflow = Workflow::where('service_id', $id)->whereHas('workflowStep',function($query) use($rejectIds){
             $query->whereNotIn('id',$rejectIds);
         })->orderBy('sort_id')->get();
-        return view('roles-permissions.services.workflow', compact('workflow'));
+        return view('workflow.services.workflow', compact('workflow'));
     }
 
     public function create()
     {
-        return view('roles-permissions.services.create');
+        return view('workflow.services.create');
     }
 
     public function store(Request $request)
@@ -48,7 +49,7 @@ class ServiceController extends Controller
     public function edit($id)
     {
         $services = Service::find($id);
-        return view('roles-permissions.services.edit', compact('services'));
+        return view('workflow.services.edit', compact('services'));
     }
 
     public function update(Request $request, $id)
