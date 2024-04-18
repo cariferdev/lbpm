@@ -11,6 +11,7 @@ Laravel Business Process Management
             "url": "https://github.com/cariferdev/lbpm.git"
         }
     ],
+    
 "require": 
 {
     "cariferdev/lbpm":"dev-main"
@@ -18,22 +19,23 @@ Laravel Business Process Management
 
 In terminal run : composer update
 
-#### Spatie Publish
+#### Publish Spatie Migrations
+
 php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
 
 In terminal run : php artisan migrate
 
-#### Publish Migrations
+#### Publish lbpm Migrations
 
 php artisan vendor:publish --tag=migrations
 
 In terminal run : php artisan migrate
 
-#### Publish Views 
+#### Publish lbpm Views 
 
 php artisan vendor:publish --tag=views
 
-#### Publish Controllers
+#### Publish lbpm Controllers
 
 php artisan vendor:publish --tag=controllers
 

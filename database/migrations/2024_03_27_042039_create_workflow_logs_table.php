@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('workflow_logs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('transaction_id',10)->nullable()->constrained('transactions');
+            // $table->foreignId('transaction_id',10)->nullable()->constrained('transactions');
             $table->foreignId('service_id',10)->nullable()->constrained('services');
             $table->foreignId('workflow_id',10)->nullable()->constrained('workflows');
             $table->foreignId('user_id',10)->nullable()->constrained('users');
