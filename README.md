@@ -19,3 +19,11 @@ php artisan vendor:publish --tag=controllers
 Spatie\Permission\PermissionServiceProvider::class,
 
 Carifer\Lbpm\WorkflowServiceProvider::class
+
+#### Spatie Publish
+php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+
+
+#### Run Migration
+
+php artisan migrate
