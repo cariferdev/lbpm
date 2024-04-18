@@ -2,18 +2,18 @@
 Laravel Business Process Management
 
 ## Installtion
-Publish Migrations
+### Publish Migrations
 
 php artisan vendor:publish --tag=migrations
 
-Publish Views 
+### Publish Views 
 
 php artisan vendor:publish --tag=views
 
-Publish Controllers
+### Publish Controllers
 
 php artisan vendor:publish --tag=controllers
 
-Update providers in config/app.php
+### Update providers in config/app.php
 
 Carifer\Lbpm\WorkflowServiceProvider::class
