@@ -18,6 +18,9 @@ Laravel Business Process Management
 
 In terminal run : composer update
 
+#### Spatie Publish
+php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+
 #### Publish Migrations
 
 php artisan vendor:publish --tag=migrations
@@ -35,9 +38,6 @@ php artisan vendor:publish --tag=controllers
 Spatie\Permission\PermissionServiceProvider::class,
 
 Carifer\Lbpm\WorkflowServiceProvider::class
-
-#### Spatie Publish
-php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
 
 #### Run Migration
 
