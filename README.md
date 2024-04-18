@@ -2,6 +2,22 @@
 Laravel Business Process Management
 
 ## Installtion
+
+#### Alter composer.json file
+
+ "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/cariferdev/lbpm.git"
+        }
+    ],
+"require": 
+{
+    "cariferdev/lbpm":"dev-main"
+},
+
+In terminal run : composer update
+
 #### Publish Migrations
 
 php artisan vendor:publish --tag=migrations
@@ -22,7 +38,6 @@ Carifer\Lbpm\WorkflowServiceProvider::class
 
 #### Spatie Publish
 php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
-
 
 #### Run Migration
 
