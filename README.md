@@ -21,9 +21,13 @@ In terminal run : composer update
 #### Spatie Publish
 php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
 
+In terminal run : php artisan migrate
+
 #### Publish Migrations
 
 php artisan vendor:publish --tag=migrations
+
+In terminal run : php artisan migrate
 
 #### Publish Views 
 
@@ -39,6 +43,3 @@ Spatie\Permission\PermissionServiceProvider::class,
 
 Carifer\Lbpm\WorkflowServiceProvider::class
 
-#### Run Migration
-
-php artisan migrate
